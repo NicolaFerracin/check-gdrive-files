@@ -26,7 +26,7 @@ The script uses a throttle of 200ms to avoid exceeding the rate limits.
 
 `cd ./check-gdrive-files && npm i`
 
-## (Optional) Replace credentials.json
+### (Optional) Replace credentials.json
 
 The `credentials.json` file contains the information of the application that will be used to access your Google Drive data. You can either leave the default credentials (taken from [here](https://developers.google.com/drive/api/v3/quickstart/nodejs)) or you can create your own app and credentials using the [Google Developer Console](https://console.developers.google.com).
 
