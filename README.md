@@ -1,16 +1,19 @@
 # Check GDrive Files
 
-Node.js script to check if files in a given directory are found or not on the authenticated Google Drive storage.
+Node.js script to check if files in a given directory are found or not on the authenticated Google Drive.
 
-The script has been written for a personal need as I was changing backup strategy from Amazon Drive to Google Drive and was unsure of what files I had alredy uploaded and to check for duplicate files present in different folders.
+The script has been written for a personal need as I was changing backup strategy from Amazon Drive to Google Drive and was unsure of what files I had alredy uploaded and to check for duplicates.
 
 ## How it works
 
-This script uses the `googleapis` npm package to authenticate the user to they GDrive account and execute queries against the storage.
+This script uses the [`googleapis` npm package](https://www.npmjs.com/package/googleapis) to authenticate the user to their GDrive account and execute queries against it.
 
-The input is either a file or a directory. In case of directories, they will scanned recursively until all the files get checked.
+The input is either a file or a directory. In case of directories, they will scanned recursively.
 
-The script will either output the list of files in 2 files or copy the files into 2 separate categories, based on the usage of the [options](#options).
+Based on the usage of the [options](#options) The script will either:
+
+- output the list of files in 2 files (`found.txt` / `not_found.txt`) or
+- copy the local files into 2 separate directories (`found` / `not_found`)
 
 During authentication the script will generate the `token.json` file that will be used for future executions to avoid re-authenticating.
 
